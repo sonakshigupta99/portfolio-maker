@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member 1 | Portfolio</title>
+  <link rel="stylesheet" href="members.css" />
+  <!-- Font Awesome CDN -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body class="dark">
+  <button id="theme-toggle" class="theme-btn">🌙 Toggle Theme</button>
+  
+  <header class="navbar">
+    <h2 class="logo">MyPortfolio</h2>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+  <section id="home" class="home-section">
+    
+    
+  <main class="profile">
+    <div class="info">
+      <h3>Hello, It's Me</h3>
+      <h1 style="color: bisque;">Ramaraman Mishra</h1>
+      <h3>And I'm a <span class="slide-text">Web Developer</span></h3>
+      <p>Hello I'm Ramaraman Mishra a Second year student and currently pursing Bachelor of Technology in Computer Science from IET DDUGU GORAKHPUR(U.P)
+
+        Expertise is to create a website design, Frontend design, Video Editing, Problem Solving and many more..</p>
+      <div class="social-icons">
+        
+        <a href="#"><i class="fab fa-linkedin-in"></i> </a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+      
+    </div>
+    <div class="image">
+      <img src="raman.jpg" alt="Member 1" class="profile-pic" />
+    </div>
+  </main>
+  
+</section>
+  
+  
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-image" data-aos="fade-left">
+        <img src="raman.jpg" alt="Profile Picture"/>
+      </div>
+      <div class="about-content" data-aos="fade-right" >
+        <h2><span style="color: #0ef;">About</span> Me</h2>
+        <h3>Web Developer</h3>
+        <p>
+            I'm a passionate web developer with experience in creating dynamic and responsive websites.
+            I enjoy turning ideas into real-world web applications.
+        </p>
+        
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
+  <section id="services" class="section services-section">
+    <h2><span style="color: white;">My</span> <span style="color: #0ef;">Services</span></h2>
+    <div class="services-container">
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Frontend  Developer</h3>
+        <p>
+            I create responsive and user-friendly websites using HTML, CSS, JavaScript, and modern frameworks like React.
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-video"></i>
+        <h3>Video Editing</h3>
+        <p>
+          I craft visual stories through dynamic editing. Skilled in Premiere Pro & After Effects, I add creativity to every project.
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Problem Solving</h3>
+        <p>
+          I tackle problems with strategy and creativity, delivering robust solutions and improving workflows through innovation.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills" class="skills-section">
+    <h2><span>TECHNICAL</span> SKILLS</h2>
+    <div class="technical-skills">
+      <div class="skill">
+        <span>HTML</span>
+        <div class="bar"><div class="animated-bar"data-percentage="100"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="bar"><div  class="animated-bar" data-percentage="90" ></div></div>
+      </div>
+      <div class="skill">
+        <span>Javascript</span>
+        <div class="bar"><div  class="animated-bar" data-percentage="85"></div></div>
+      </div>
+      <div class="skill">
+        <span>Python</span>
+        <div class="bar"><div  class="animated-bar" data-percentage="93"></div></div>
+      </div>
+      <div class="skill">
+        <span>React</span>
+        <div class="bar"><div  class="animated-bar" data-percentage="80"></div></div>
+      </div>
+    </div>
+  
+    <h2><span>PROFESSIONAL</span> SKILLS</h2>
+    <div class="professional-skills">
+        <div class="circle-container">
+          <div class="circle" data-percentage="90">0%</div>
+          <p>Creativity</p>
+        </div>
+        <div class="circle-container">
+          <div class="circle" data-percentage="92">0%</div>
+          <p>Communication</p>
+        </div>
+        <div class="circle-container">
+          <div class="circle" data-percentage="80">0%</div>
+          <p>Problem Solving</p>
+        </div>
+        <div class="circle-container">
+          <div class="circle" data-percentage="85">0%</div>
+          <p>Team Work</p>
+        </div>
+      </div>
+  </section>
+  
+  <script>
+    // Animate technical skill bars
+    const animateBars = () => {
+      document.querySelectorAll(".animated-bar").forEach(bar => {
+        const percent = bar.getAttribute("data-percentage");
+        bar.style.width = percent + "%";
+      });
+    };
+  
+    // Animate circular percentages
+    const animateCircles = () => {
+      document.querySelectorAll(".circle").forEach(circle => {
+        const percent = parseInt(circle.getAttribute("data-percentage"));
+        let count = 0;
+        const interval = setInterval(() => {
+          if (count <= percent) {
+            circle.innerText = count + "%";
+            circle.style.background = `conic-gradient(#00bcd4 0% ${count}%, #1c2c45 ${count}% 100%)`;
+            count++;
+          } else {
+            clearInterval(interval);
+          }
+        }, 20);
+      });
+    };
+  
+    // IntersectionObserver to trigger animation once in view
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateBars();
+          animateCircles();
+          observer.disconnect(); // Run only once
+        }
+      });
+    }, { threshold: 0.4 });
+  
+    observer.observe(document.querySelector("#skills"));
+  </script>
+  
+  <section id="projects" class="projects-section">
+    <h2><span>My</span> Projects</h2>
+    <div class="projects-container">
+  
+      <div class="project-card">
+        <div class="icon">🩸</div>
+        <h3>Blood Donation Website</h3>
+        <p>
+          I developed a user-friendly and impactful blood donation website aimed at spreading awareness
+          about the importance of blood donation. The platform acts as a bridge, connecting donors with patients in need.
+        </p>
+      </div>
+  
+      <div class="project-card">
+        <div class="icon">💼</div>
+        <h3>Portfolio</h3>
+        <p>
+          My technical skills include front-end and back-end development, database management, and version control using tools like Git.
+          I am eager to contribute to real-world projects with innovative tech solutions.
+        </p>
+      </div>
+  
+      <div class="project-card">
+        <div class="icon">🎵</div>
+        <h3>Spotify Clone</h3>
+        <p>
+          I developed a Spotify-inspired music streaming application that replicates the functionality and design of a modern platform.
+          This showcases my skills in building dynamic and interactive web apps.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+ 
+  
+  
+  
+  <section id="contact" class="contact-section">
+    <h2>Contact <span>Me</span></h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </section>
+  
+  
+    
+
+  
+  <a href="index .html" class="back-btn">← Back to Home</a>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
+</script> 
+<script src="members.js"></script>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 . All rights reserved.</p>
+    <p>Designed and Developed with ❤️ using HTML, CSS & JavaScript</p>
+  </div>
+</footer>
+
+  
+</body>
+</html>
